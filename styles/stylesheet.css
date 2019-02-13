@@ -16,6 +16,7 @@ header {
 	height: auto;
 	position: fixed;
 	top: 0;
+	z-index: 3;
 }
 
 nav {
@@ -95,20 +96,118 @@ main {
 	margin-bottom: 3em;
 	height: auto;
 	padding: 2em;
+	z-index: 0;
 }
 
 main section {
-	height: 1000em;
+	height: auto;
 	background-color: white;
-	padding: 2em;
-	border-radius: 1em;
+	padding: 1em 2em;
+	border-radius: 0.5em;
 }
 
 main section h2 {
 	width: 100%;
-	font-weight: 600;
-	font-size: 1em;
+	font-size: 1.5em;
+	font-weight: 500;
+	display: block;
+	margin-bottom: 0.2em;
+	margin-left: 1.3em;
 }
+
+main section p {
+	margin-bottom: 1.5em;
+	margin-left: 2em;
+}
+
+main section div#grid {
+	padding: 1em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: flex-start;
+	transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+main section img {
+	margin: 1em;
+	width: 30%;
+	height: 100%;
+}
+
+main section div img:hover {
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+div.radiobtn {
+	display: inline-block;
+	margin: 0.5em 2em 0em 0em;
+	border-radius: 0.5em;
+	-webkit-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.25);
+	padding: 0.5em 1em 0.5em 1em;
+	background-color: white;
+}
+
+.rood img.rood, 
+.blauw img.blauw, 
+.groen img.groen {
+	display: none;
+}
+
+
+button.sortbtn {
+	margin: 1em 0em;
+	border-radius: 1em;
+	background-color: black;
+	display: block;
+	color: white;
+	width: 100%;
+}
+div.radiobtn:nth-of-type(1) {
+	background-color: red;
+	color: white;
+}
+
+div.radiobtn:nth-of-type(2) {
+	background-color: green;
+	color: white;
+}
+
+div.radiobtn:nth-of-type(3) {
+	background-color: blue;
+	color: white;
+}
+
+/* Filteren */
+form {
+	width: auto;
+	margin-left: 2em;
+	background-color: lightgrey;
+	padding: 1.5em 2em 2em 2em;
+	border-radius: 0.25em;
+	display: inline-block;
+}
+fieldset {
+	border: none;
+	color: black;
+}
+
+legend {
+	font-weight: 800;
+}
+
+input {
+	padding-right: 1em;
+}
+
 
 /* Footer */
 footer:last-of-type {
@@ -119,4 +218,8 @@ footer:last-of-type {
 	-webkit-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.10);
 	-moz-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.10);
 	box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.10);
+}
+
+label {
+	padding: 2em;
 }
