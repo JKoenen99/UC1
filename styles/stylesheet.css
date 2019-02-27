@@ -157,6 +157,7 @@ main section img {
 main section div img:hover {
 	opacity: 0.7;
 	transition: 0.3s;
+	transform: scale(1.05);
 }
 
 div.radiobtn {
