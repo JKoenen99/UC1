@@ -11,19 +11,19 @@
 //     alert(alertKleur);
 // }
 
- var body = document.querySelector('#grid');
+ var grid = document.querySelector('#grid');
  var blauwKnop = document.querySelector('input[name=blauw]');
  var roodKnop = document.querySelector('input[name=rood]');
  var groenKnop = document.querySelector('input[name=groen]');
 
  blauwKnop.onclick = function () {
- 	body.classList.toggle('blauw');
+ 	grid.classList.toggle('blauw');
  }
 
 roodKnop.onclick = function () {
-	body.classList.toggle('rood');
+	grid.classList.toggle('rood');
 }
 
 groenKnop.onclick = function () {
-	body.classList.toggle('groen');
+	grid.classList.toggle('groen');
 }
